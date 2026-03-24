@@ -1,7 +1,7 @@
 
 
  // function BrainCheck(){
-const randomColor =`#${Math.floor(Math.random() * 360)
+let randomColor =`#${Math.floor(Math.random() * 360)
     .toString(16).padEnd(6, '7')}`;
 
     console.log(randomColor)
@@ -23,7 +23,7 @@ TimerHTML.innerHTML =--seconds
 setTimeout(() => {
 TimerHTML.innerHTML =--seconds
 
-}, 5000);//}
+}, 5000);
 setTimeout(() => {
     seconds = 5
 TimerHTML.innerHTML =seconds
@@ -49,28 +49,23 @@ TimerHTML.innerHTML =--seconds
 setTimeout(() => {
 TimerHTML.innerHTML =--seconds
 
-}, 11000);
-
+}, 11000);//}
 
 var InputColorPicker = document.getElementById('ColorPicker')
-InputColorPicker.addEventListener('input',function GetHEX(){
-    const HEXcolorValue  = InputColorPicker.value
+InputColorPicker.addEventListener('change',function GetHEX(){
+    let HEXcolorValue  = InputColorPicker.value
     document.getElementById('HEXvalue').textContent = HEXcolorValue
-    if (HEXcolorValue>randomColor){
-       let doS= document.createElement('h2')
- document.body.append(doS)
+    var doS= document.createElement('div')
+    document.body.append(doS)
+if (HEXcolorValue>randomColor){
  doS.textContent = 'Smaller'
     }
-    else if (HEXcolorValue=randomColor){
-        let Inf= document.createElement('h2')
- document.body.append(Inf)
- Inf.textContent = 'You Right'
-    }
-else{
-   let doM= document.createElement('h2')
- document.body.append(doM)
- doM.textContent = 'More'
-}}
-    
+if(HEXcolorValue<randomColor){
+ doS.textContent = 'More'
+}
+if(HEXcolorValue==randomColor){
+    doS.textContent = 'You Right'
+   }  
+}
 )
  

@@ -59,12 +59,12 @@ InputColorPicker.addEventListener('input',function GetHEX(){
     if (HEXcolorValue>randomColor){
        let doS= document.createElement('h2')
  document.body.append(doS)
- doS.textContent = 'do >'
+ doS.textContent = 'Smaller'
     }
 else{
    let doM= document.createElement('h2')
  document.body.append(doM)
- doM.textContent = 'do <'
+ doM.textContent = 'More'
 }}
     
 )

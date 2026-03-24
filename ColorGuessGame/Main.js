@@ -61,6 +61,11 @@ InputColorPicker.addEventListener('input',function GetHEX(){
  document.body.append(doS)
  doS.textContent = 'Smaller'
     }
+    else if (HEXcolorValue=randomColor){
+        let Inf= document.createElement('h2')
+ document.body.append(Inf)
+ Inf.textContent = 'You Right'
+    }
 else{
    let doM= document.createElement('h2')
  document.body.append(doM)
